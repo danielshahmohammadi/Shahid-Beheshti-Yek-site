@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Local environment and configuration
+.venv/
+venv/
+.env
+
+# Local database
+db.sqlite3
