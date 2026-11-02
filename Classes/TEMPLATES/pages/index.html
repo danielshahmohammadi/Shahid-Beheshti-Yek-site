@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>شهید بهشتی یک </title>
 </head>
-<body>
-    Page One HTML
+<body dir="rtl"bgcolor="C7CBB8">
+    <p style="font-family:Lalezar; font-size:14px; color:#1e3a2e;">
+    <center>
+        <h1 style="font-family:Lalezar; font-size:30px; color:#1e3a2e;">شهید بهشتی یک</h1>
+    </center>
+    </p>
+    <header>
+        {% for mu in menu %}
+        <ul>
+            <li><a href="{% url mu.url_name %}" style="font-family:Lalezar;">{{ mu.title }}</a></li>
+        </ul>
+        {% endfor %}
+    </header>
 </body>
 </html>

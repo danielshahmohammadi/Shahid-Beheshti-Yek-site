@@ -3,11 +3,51 @@ from django.shortcuts import render
 
 # 1
 def home(request):
-    return render(request,'pages/index.html')
+    menu = [
+        {
+            "title":"درباره ما",
+            "url_name":"about",
+        },
+        {
+            "title":"گالری تصاویر",
+            "url_name":"gallerylist",
+        },
+        {
+            "title":"تماس با ما",
+            "url_name":"contanct_use",
+        },
+        {
+            "title":"اخبار",
+            "url_name":"newslist",
+        },
+        {
+            "title":"ورود کاربر",
+            "url_name":"login",
+        },
+        {
+            "title":"افتخارات مدرسه",
+            "url_name":"honnors",
+        },
+        {
+            "title":"کارکنان مدرسه",
+            "url_name":"school_staff",
+        },
+        {
+            "title":"وبلاگ",
+            "url_name":"weblog",
+        },
+
+        {
+            "title":"امکانات",
+            "url_name":"facilitys",
+        }
+        
+    ]
+    return render(request,'pages/index.html',{"menu":menu})
 
 # 2
 def about(request):
-    return render (request,"'pages/about.html")
+    return render (request,"pages/about.html")
 # درباره ما 
 
 # 3
@@ -33,7 +73,7 @@ def login(request):
 # 7
 def dashboard(request): 
     return render (request,"pages/dashboard.html")
-# پس از ورود کاربر
+# پنل کاربری
 
 # 8
 def studentview (request):
@@ -80,7 +120,7 @@ def honnors (request):
 
 # 16
 def school_staff (request):
-    return render (request ,"pages/school_staff.html")
+    return render (request ,"pages/chool_staff.html")
 # کارکنان مدرسه
 
 # 17
@@ -140,6 +180,3 @@ def majors(request):
 
 # def Call(request):
 #     return HR ("Call us : 0243333427")
-
-
-
