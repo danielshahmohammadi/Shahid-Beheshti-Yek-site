@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}مدرسه من{% endblock %}</title>
+</head>
+
+<body>
+
+    <header style="text-align: center; background-color: #f8f8f8; padding: 20px;">
+        <h1>مدرسه من</h1>
+    </header>
+
+    <nav style="text-align: center; margin: 20px 0;">
+        {% for item in menu %}
+        <a href="{% url item.url_name %}" style="font-family:Lalezar;">{{ item.title }}</a>
+        {% endfor %}
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p style="text-align: center;">اطلاعات مدرسه</p>
+    </footer>
+
+</body>
+</html>

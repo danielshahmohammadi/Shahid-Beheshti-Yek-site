@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شهید بهشتی یک </title>
-</head>
-<body dir="rtl"bgcolor="C7CBB8">
-    <p style="font-family:Lalezar; font-size:14px; color:#1e3a2e;">
-    <center>
-        <h1 style="font-family:Lalezar; font-size:30px; color:#1e3a2e;">شهید بهشتی یک</h1>
-    </center>
-    </p>
-    <header>
-        {% for mu in menu %}
-        <ul>
-            <li><a href="{% url mu.url_name %}" style="font-family:Lalezar;">{{ mu.title }}</a></li>
-        </ul>
-        {% endfor %}
-    </header>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}خانه{% endblock %}
+
+{% block content %}
+<h2 style="font-family:Lalezar; text-align:center; color:#1e3a2e;">شهید بهشتی یک</h2>
+{% endblock %}

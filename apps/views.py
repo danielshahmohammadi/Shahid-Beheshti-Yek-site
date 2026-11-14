@@ -1,49 +1,9 @@
 from django.shortcuts import render
-# from django.http import HttpResponse as HR
+from .db import mu
 
 # 1
 def home(request):
-    menu = [
-        {
-            "title":"درباره ما",
-            "url_name":"about",
-        },
-        {
-            "title":"گالری تصاویر",
-            "url_name":"gallerylist",
-        },
-        {
-            "title":"تماس با ما",
-            "url_name":"contanct_use",
-        },
-        {
-            "title":"اخبار",
-            "url_name":"newslist",
-        },
-        {
-            "title":"ورود کاربر",
-            "url_name":"login",
-        },
-        {
-            "title":"افتخارات مدرسه",
-            "url_name":"honnors",
-        },
-        {
-            "title":"کارکنان مدرسه",
-            "url_name":"school_staff",
-        },
-        {
-            "title":"وبلاگ",
-            "url_name":"weblog",
-        },
-
-        {
-            "title":"امکانات",
-            "url_name":"facilitys",
-        }
-        
-    ]
-    return render(request,'pages/index.html',{"menu":menu})
+    return render(request, 'pages/index.html', {'menu': mu()})
 
 # 2
 def about(request):
