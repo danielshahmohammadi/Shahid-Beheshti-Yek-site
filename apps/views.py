@@ -93,12 +93,12 @@ def gheybat_list(request):
 
 # 11
 def gradelist (request):
-    return render (request ,"pages/gradelist.html")
+    return render (request ,"pages/gradelist.htm")
 # نمرات کلاسی
 
 # 12
 def wekkly_program (request):
-    return render (request ,"pages/programweek.html")
+    return render (request ,"pages/rogramweek.html")
 # برنامه هفتگی
 
 # 13
@@ -109,7 +109,7 @@ def st_darslist (request):
 
 # 14
 def changepwd (request):
-    return render (request ,"pages/changepwd.html")
+    return render (request ,"pages/hangepwd.html")
 # تفییر رمز عبور
 
 # 15
